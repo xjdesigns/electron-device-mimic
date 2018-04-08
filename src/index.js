@@ -4,10 +4,10 @@ var ipc = require('electron').ipcRenderer;
 var io = require('socket.io-client');
 var socket = io('http://localhost:7003');
 
-ipc.on('data-loaded', helloWorld)
+ipc.on('data-loaded', dataLoaded)
 
-function helloWorld(event, data) {
-  console.warn('hello world func', data);
+function dataLoaded(event, data) {
+  console.warn('dataLoaded:: triggered on fetch, app load and simulate-scan', data);
 }
 
 var btn = document.getElementById('clicker')

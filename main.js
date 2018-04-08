@@ -58,7 +58,7 @@ ipcMain.on('simulate-scan', function() {
       win.webContents.send('data-loaded', json)
     })
     .catch((err) => {
-      console.warn('err from fetch::', err);
+      console.warn('err from fetch:: please start the json-server file but running node json-server');
     })
 })
 
