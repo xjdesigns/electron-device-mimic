@@ -3,6 +3,8 @@
 This project is build off json-server and electron. The idea is to allow for local development while simulating devices sending requests with APIs.
 
 The goal is to serve a UI which gives you the option to select which device event to simulate, and will serve over the port you configured.
+
+Below is all TODOS:
 * choose which device
 * choose which ports
 * set which data on the fly
@@ -25,7 +27,11 @@ npm i
 In the command line run the following command.
 
 This will serve the `db.json` file over `localhost:7001`.
-
 ```bash
-json-server --watch db.json
+node json-server
+```
+
+This starts the electron app
+```bash
+npm start
 ```

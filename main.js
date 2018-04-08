@@ -45,7 +45,9 @@ app.on('ready', function () {
       console.warn('json res', json);
       win.webContents.send('data-loaded', json)
     })
-
+    .catch((err) => {
+      console.warn('err from fetch:: please start the json-server file but running node json-server');
+    })
 });
 
 ipcMain.on('simulate-scan', function() {
@@ -54,6 +56,9 @@ ipcMain.on('simulate-scan', function() {
     .then(json => {
       console.warn('json res', json);
       win.webContents.send('data-loaded', json)
+    })
+    .catch((err) => {
+      console.warn('err from fetch::', err);
     })
 })
 

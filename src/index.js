@@ -11,7 +11,6 @@ function helloWorld(event, data) {
 }
 
 var btn = document.getElementById('clicker')
-console.warn('btn', btn);
 btn.onclick = simulateScan
 
 function simulateScan() {
@@ -20,7 +19,6 @@ function simulateScan() {
   var msg = 'I came from my simulator app';
   socket.emit('device:sim', msg)
 }
-
 
 socket.on('device:sim', function(msg) {
   console.warn('this works, I am INDEX JS');
