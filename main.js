@@ -19,7 +19,6 @@ app.on('ready', function () {
   });
 
   // Specify entry point
-  // win.loadURL('http://localhost:3000');
   const startUrl = process.env.ELECTRON_START_URL || url.format({
       pathname: path.join(__dirname, '/src/index.html'),
       protocol: 'file:',
